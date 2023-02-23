@@ -1,0 +1,90 @@
+@import "../../assets//styles/variables.scss";
+
+.header {
+  height: calc(100vh - 7.8rem);
+  position: relative;
+  overflow: hidden;
+
+  .heading {
+    position: relative;
+    .heading__primary {
+      font-size: 20rem;
+      font-weight: 600;
+      max-width: fit-content;
+      color: $color-text-heading;
+      margin-top: -2rem;
+      margin-left: 25rem;
+      letter-spacing: 2rem;
+      text-transform: uppercase;
+    }
+    .heading__bold {
+      font-size: 25rem;
+      font-weight: 900;
+      color: $color-text-primary;
+      margin-top: -10rem;
+      margin-left: 15rem;
+      text-transform: uppercase;
+    }
+    .heading__secondary {
+      font-size: 6rem;
+      font-weight: 700;
+      color: $color-text-primary;
+      max-width: 30%;
+      margin-top: -4rem;
+      margin-left: -48rem;
+    }
+    .heading__btn {
+      padding: 1rem 2rem;
+      background-image: linear-gradient(to right, #fdc830, #f37335);
+      text-transform: uppercase;
+      border-radius: 1rem;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: $color-text-primary;
+      position: absolute;
+      top: 78%;
+      left: 28%;
+    }
+  }
+  .avatars {
+    .avatarBackgrond {
+      position: absolute;
+      top: -10%;
+      right: -12%;
+      z-index: 1;
+
+      animation-name: rotateBackgrond;
+      animation-iteration-count: infinite;
+      animation-duration: 10s;
+
+      transition: all 3s;
+    }
+    .avatarOne {
+      position: absolute;
+      top: 10%;
+      right: 10%;
+      z-index: 2;
+    }
+    .avatarTwo {
+      position: absolute;
+      top: 25%;
+      right: 10%;
+      z-index: 3;
+    }
+  }
+}
+
+@keyframes rotateBackgrond {
+  0% {
+    rotate: 90deg;
+  }
+  25% {
+    rotate: 180deg;
+  }
+  50% {
+    rotate: 270deg;
+  }
+  100% {
+    rotate: 360deg;
+  }
+}

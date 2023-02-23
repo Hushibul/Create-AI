@@ -1,0 +1,11 @@
+@import "../../assets//styles/variables.scss";
+
+.navbar {
+  margin-top: 2rem;
+  .btn {
+    background-color: $color-btn-primary;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+  }
+}

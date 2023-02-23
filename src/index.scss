@@ -1,0 +1,135 @@
+@import "./assets/styles/variables.scss";
+
+@font-face {
+  font-family: "Adobe Clean", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  src: local("Adobe Clean"),
+    url("./assets/fonts/AdobeCleanLight.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Adobe Clean", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  src: local("Adobe Clean"),
+    url("./assets/fonts/AdobeCleanBold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Adobe Clean", sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  src: local("Adobe Clean"),
+    url("./assets/fonts/AdobeCleanBlack.woff") format("woff");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: $color-background-primary;
+  font-family: "Adobe Clean", sans-serif;
+  font-weight: 300;
+  color: $color-text-primary;
+}
+
+a {
+  text-decoration: none;
+  color: $color-text-primary;
+}
+
+a:hover {
+  color: $color-text-primary;
+}
+
+ul {
+  list-style: none;
+}
+
+li::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background: $color-text-heading;
+  display: block;
+  margin: auto;
+  transition: 0.5s;
+}
+
+li:hover::after {
+  width: 100%;
+}
+
+input {
+  padding: 1rem 3rem;
+  background-color: transparent;
+  border: 1px solid $color-text-heading;
+  border-radius: 0.5rem;
+  width: 100%;
+  color: $color-text-primary;
+  font-weight: 300;
+  font-size: 1.7rem;
+}
+
+.btn-primary {
+  padding: 1rem 2rem;
+  background-image: linear-gradient(to right, #12c2e9, #c471ed);
+  color: $color-text-primary;
+  border-radius: 0.5rem;
+  font-size: 2rem;
+  transition: all 0.5s;
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+}
+.btn-primary:active {
+  transform: translateY(2px);
+}
+
+.labels {
+  font-size: 1.7rem;
+  color: $color-text-primary;
+  font-weight: 300;
+}
+
+.heading-primary {
+  font-size: 4rem;
+  font-weight: 700;
+}
+
+.icon-large {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.masonry-gallery {
+  columns: 4;
+  // break-inside: avoid;
+  gap: 0;
+}
+
+@media (max-width: $breakpoint-tablet) {
+  .masonry-gallery {
+    columns: 3;
+  }
+}
+
+@media (max-width: $breakpoint-mobile) {
+  .masonry-gallery {
+    columns: 2;
+  }
+}
